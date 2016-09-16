@@ -1,7 +1,15 @@
+/*
+ * Pot PWM DC Motor Controller
+ * APurdon
+ * 2016-09-16
+ * 
+ * Influenced by: 
+ * Arduino Starter Kit example 9 
+ */
+
 const int potPin = A0;
 const int ledPin = 10;
 const int motorPin = 9;
-
 
 int potValue = 0;
 int pwmValue = 0;
@@ -10,7 +18,6 @@ int power = 0;
 int oldPower = 0;
 
 void setup() {
-
     Serial.begin(9600);
 
     pinMode(potPin, INPUT);
