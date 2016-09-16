@@ -18,10 +18,13 @@ int potValue;
 int pwmValue;
 
 void setup() {
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < sizeof(rgbPotPins[i]) ; i++)
   {
     pinMode(rgbPotPins[i], INPUT);
-    pinMode(rgbPwmPins[i], OUTPUT);
+  }
+  for (int i = 0; i < sizeof(rgbPwnPins); i++)
+  {
+    pinMode(rgbPwnPins[i], OUTPUT);
   }
 }
 
